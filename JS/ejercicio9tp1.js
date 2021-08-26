@@ -1,5 +1,3 @@
-//9
-
 let frase = prompt("Ingrese una frase:");
 let cantidad = frase.length;
 let vocal1 = "a";
