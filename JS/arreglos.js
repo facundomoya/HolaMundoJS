@@ -10,6 +10,27 @@ let temporada = [];
 
 document.write(series[2]);
 
+// funcion para mostrar los elementos del arreglo (arrow function), SIEMPRE VA ANTES DE SU LLAMADO PARA MOSTRAR, ESTO SE DEBE A QUE SE DECLARA UNA VARIABLE let Y ESA VARIABLE ACTUA DESDE ESA LINEA DE CODIGO HASTA ABAJO
+ let mostrarseries = () => {
+    for(let posicion = 0;posicion < series.length;posicion++){
+        document.write("<br> Serie: "+ series[posicion])
+    }
+    document.write("<br>")
+} 
+
+//funcion tradicional para mostrar elementos del arreglo
+
+mostrarseriesnetflix()
+
+function mostrarseriesnetflix (){
+    document.write("<h3>Arreglo de series</h3>")
+    for(let posicion = 0;posicion < series.length;posicion++){
+        document.write("<br> Serie: "+ series[posicion])
+        document.write(`<br> Serie: ${series[posicion]} posicion: ${posicion}`); //otra forma de concatenar con comillas simples, si es que debo concatenar muchas veces, si es que debo concatener una sola vez suele utilizarse el operador  +
+    }
+    document.write("<br>")
+}
+
 // agregar un elemento al final del arreglo
 
 series.push("Dr.House");
@@ -22,10 +43,10 @@ document.write("<br>" + series[6]);
 // recorrer cada elemento de un arreglo
 // la variable posicion es la flechita que señala cada cajita donde se encuentran los datos del vector
 
-for(let posicion = 0;posicion < series.length;posicion++){
+ for(let posicion = 0;posicion < series.length;posicion++){
     document.write("<br> Serie: "+ series[posicion])
 }
-
+ 
 // agregar un elemento en una posicion particular
 
 //el primer valor nos dice la posicion donde queremos agregar el elemento
@@ -44,3 +65,4 @@ series.splice(4,2);
 //modificar un elemento desde una posicion particular del arreglo
 
 series[4]="Vikingos"
+
