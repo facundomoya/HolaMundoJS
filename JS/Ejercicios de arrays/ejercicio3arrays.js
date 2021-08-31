@@ -10,6 +10,5 @@ for(let i =0; i<=49; i++)
     document.write(" y el segundo dado es: "+lanza2)
     document.write("<br>")
     resultado.push(suma)
-
 }
 document.write("<br>El array es: "+resultado)
