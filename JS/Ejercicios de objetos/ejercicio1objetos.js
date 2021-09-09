@@ -2,22 +2,32 @@ let auto = {
     color: "Negro",
     marca: "Mercedes Benz",
     modelo: "2010",
-    encendido: function () {
-        return true;
+    modo: "Apagado",
+
+    mostrar(){
+        document.write(`
+        Color: ${auto.color}<br>
+        Marca: ${auto.marca}<br>
+        Modelo: ${auto.modelo}<br>
+        Modo: ${auto.modo}<br>`)
+        document.write("<br>")
     },
-    apagado: function () {
-        return false;
+    encender(){
+        auto.modo = "Encendido"
+    },
+    apagado(){
+        auto.modo = "Apagado"
     }
 }
-mostrarObjeto()
 
-function mostrarObjeto() {
-    document.write("Auto<br>");
-    let mostrar = Object.keys(auto)
-    for (let i = 0; i < mostrar.length; i++) {
-      let clave = mostrar[i];
-      document.write(`<br> ${clave}: ${auto[clave]}`);
-    }
-  }
+auto.mostrar()
+auto.encender()
+auto.mostrar()
+auto.apagado()
+auto.mostrar()
+auto.encender()
+auto.mostrar()
+
+
 
   
